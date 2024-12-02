@@ -1,0 +1,43 @@
+export const TEXT = {
+  LOGO_TITLE: "Signaturit Group",
+  UPLOAD_DOCUMENTS_TITLE: "Upload documents",
+  RIGHTS_RESERVED: "All rights reserved",
+  DOCUMENT_LIST: {
+    SEND_DOCUMENTS_TO_SIGN: "Send documents to sign",
+    EMAIL_LIST_TITLE: "Sent emails list",
+    DELETE_CONFIRMATION: "Are you sure you want to delete this document?",
+    DOCUMENT_NAME: "Document Name",
+    STATUS: "Status",
+    ACTIONS: "Actions",
+    DELETE: "Delete",
+    REQUEST_SIGNATURE: "Request Signature",
+    VIEW_EMAILS: "View Emails",
+    TITLE: "Document List",
+    NO_FILES_UPLOADED: "No files uploaded",
+    DELETE_CONFIRMATION_TITLE: "Delete Confirmation",
+    DELETE_DOCUMENT: "Delete Document",
+    DELETE_SUCCESS: "Document deleted successfully",
+  },
+  UPLOAD_DOCUMENT: {
+    SELECT_FILE: "Select File",
+    ALLOWED_FILE_TYPES: "Only .pdf and .docx files are allowed",
+    ADD_MORE_DOCUMENTS: "Add more documents",
+    UPLOAD_FILES: "Upload Files",
+    MAX_FILES_EXCEEDED: "You can only upload up to 10 documents",
+    UPLOAD_SUCCESS: "Documents uploaded",
+  },
+  SIGNATURE_REQUEST: {
+    EMAIL_PLACEHOLDER: "Enter email address",
+    SEND_SIGNATURE_REQUEST: "Send Signature Request",
+    SIGNATURE_REQUEST_SENT: "Signature request sent",
+    INVALID_EMAIL: "Invalid email address",
+    COMPLETED: "Signature request completed",
+  },
+  EMAIL_LIST: {
+    CLOSE: "Close",
+  },
+  CONFIRM_MODAL: {
+    CANCEL: "Cancel",
+    CONFIRM: "Confirm",
+  },
+};
