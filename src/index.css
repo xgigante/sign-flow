@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white text-xs md:text-sm lg:text-base px-4 py-2 rounded hover:bg-blue-700 cursor-pointer;
+}
+
+.btn-secondary {
+  @apply bg-gray-500 text-white text-xs md:text-sm lg:text-base px-4 py-2 rounded hover:bg-gray-700 cursor-pointer;
+}
+
+.btn-primary-small {
+  @apply bg-blue-600 text-white px-2 py-1 pr-3 pl-3 rounded hover:bg-blue-700 inline-flex items-center text-xs cursor-pointer;
+}
+
+.btn-secondary-small {
+  @apply bg-gray-500 text-white px-2 py-1 pr-3 pl-3 rounded hover:bg-gray-700 inline-flex items-center text-xs cursor-pointer;
+}
+
+.btn-primary-disabled {
+  @apply bg-blue-300 text-white text-xs md:text-sm lg:text-base px-4 py-2 rounded cursor-not-allowed;
+}
+
+.btn-secondary-disabled {
+  @apply bg-gray-300 text-white text-xs md:text-sm lg:text-base px-4 py-2 rounded cursor-not-allowed;
+}
+
+.toast-success {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.toast-error {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.toast-info {
+  background-color: #2196f3; /* Azul */
+  color: white;
+}
+
+.toast-loading {
+  background-color: #ff9800; /* Naranja */
+  color: white;
+}
