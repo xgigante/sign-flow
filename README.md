@@ -9,7 +9,7 @@ To install and run the application, follow these steps:
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-username/sign-flow.git
+   git clone https://github.com/xgigante/sign-flow.git
    cd sign-flow
    ```
 
