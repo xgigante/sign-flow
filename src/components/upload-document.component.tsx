@@ -17,8 +17,8 @@ import ProgressBar from "../share/components/progress-bar.component";
  * @returns {JSX.Element} The rendered UploadDocument component.
  */
 const UploadDocument: React.FC<UploadDocumentProps> = ({ onFileUpload }) => {
-  const { stateDocument, handlers } = useUploadDocumentActions(onFileUpload);
-  const { files, progress, isRunning } = stateDocument;
+  const { documentState, handlers } = useUploadDocumentActions(onFileUpload);
+  const { files, progress, isRunning } = documentState;
   const { handleFileChange, handleDeleteFile, handleUpload } = handlers;
 
   return (

@@ -51,7 +51,7 @@ export const useUploadDocumentActions = (
   };
 
   return {
-    stateDocument: { files, progress, isRunning },
+    documentState: { files, progress, isRunning },
     handlers: {
       handleFileChange,
       handleDeleteFile,
