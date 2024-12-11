@@ -7,6 +7,15 @@ import { DocumentProvider } from "./context/document-context";
 import { useAppActions } from "./hooks/use-app-actions.hook";
 import Modal from "./share/components/modal.component";
 
+/**
+ * The main application component.
+ *
+ * This component uses the `useAppActions` hook to manage modal state and handlers.
+ * It renders the `Header`, `Main`, and `Footer` components, and conditionally
+ * displays a `Modal` based on the modal state.
+ *
+ * @returns {JSX.Element} The rendered application component.
+ */
 const App: React.FC = () => {
   const { modalState, handlers } = useAppActions();
   const { isModalOpen, modalContent, modalTitle } = modalState;

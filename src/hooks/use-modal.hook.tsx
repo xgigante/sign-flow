@@ -1,9 +1,14 @@
 import { useState } from "react";
 
 /**
- * Custom hook for managing modal state.
+ * Custom hook to manage modal state.
  *
- * @returns {object} Object containing modal state and handlers.
+ * @returns {object} An object containing:
+ * - `isModalOpen` {boolean}: State indicating if the modal is open.
+ * - `modalContent` {React.ReactNode}: Content to be displayed in the modal.
+ * - `modalTitle` {string}: Title of the modal.
+ * - `openModal` {function}: Function to open the modal with a specified title and content.
+ * - `closeModal` {function}: Function to close the modal and reset its state.
  */
 export const useModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

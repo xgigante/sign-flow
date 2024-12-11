@@ -8,17 +8,13 @@ import { TEXT } from "../constants/constants";
 import { useModal } from "./use-modal.hook";
 
 /**
- * Custom hook that provides application actions and modal state management.
+ * A custom hook that provides modal state and handlers for the application.
  *
- * @returns {object} An object containing modal state and actions.
- * @returns {object.modal} Modal state and control functions.
- * @returns {boolean} modal.isModalOpen - Indicates if the modal is open.
- * @returns {ReactNode} modal.modalContent - The content of the modal.
- * @returns {string} modal.modalTitle - The title of the modal.
- * @returns {function} modal.openModal - Function to open the modal.
- * @returns {function} modal.closeModal - Function to close the modal.
- * @returns {object.actions} Application actions.
- * @returns {function} actions.handleConfirm - Function to handle confirmation actions.
+ * This hook uses the `useModal` and `useSimulateProgress` hooks to manage modal state
+ * and simulate a progress bar. It also provides a `handleConfirm` function to handle
+ * modal confirmations.
+ *
+ * @returns {Object} An object containing modal state and handlers.
  */
 export const useAppActions = () => {
   const { isModalOpen, modalContent, modalTitle, openModal, closeModal } =
