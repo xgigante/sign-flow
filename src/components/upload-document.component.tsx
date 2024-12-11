@@ -15,21 +15,11 @@ import ProgressBar from "../share/components/progress-bar.component";
  * @param {function} props.onFileUpload - Callback function to handle file upload.
  *
  * @returns {JSX.Element} The rendered UploadDocument component.
- *
- * @remarks
- * This component uses the `useUploadDocumentActions` hook to manage the state and actions related to file uploads.
- * It supports uploading multiple files with extensions .pdf and .docx.
- * The component displays a progress bar during the upload process and allows users to delete files before uploading.
  */
 const UploadDocument: React.FC<UploadDocumentProps> = ({ onFileUpload }) => {
-  const {
-    files,
-    progress,
-    isRunning,
-    handleFileChange,
-    handleDeleteFile,
-    handleUpload,
-  } = useUploadDocumentActions(onFileUpload);
+  const { stateDocument, handlers } = useUploadDocumentActions(onFileUpload);
+  const { files, progress, isRunning } = stateDocument;
+  const { handleFileChange, handleDeleteFile, handleUpload } = handlers;
 
   return (
     <div>
