@@ -7,20 +7,22 @@ import { DocumentStatusEnum } from "../constants/documents.contants";
 import { ModalIdEnum } from "../constants/modals.constants";
 
 /**
- * Custom hook to manage signature request actions.
+ * Custom hook that provides actions and state management for handling signature requests.
  *
- * @param onRequestSignature - Callback function to handle signature request.
- * @returns An object containing state and handlers for managing signature requests.
+ * @param onRequestSignature - Callback function to be called when a signature request is made.
+ * @returns An object containing the current state and handlers for managing signature requests.
  *
- * @property {string[]} emails - Array of email addresses.
- * @property {boolean[]} errors - Array of boolean values indicating email validation errors.
- * @property {number} progress - Progress value for the signature request process.
- * @property {boolean} isRunning - Boolean indicating if the signature request process is running.
- * @property {function} handleEmailChange - Handler to update email address at a specific index.
- * @property {function} handleEmailError - Handler to update email validation error at a specific index.
- * @property {function} addEmailInput - Handler to add a new email input field.
- * @property {function} removeEmailInput - Handler to remove an email input field at a specific index.
- * @property {function} handleRequestSignature - Handler to initiate the signature request process.
+ * @property {Object} signatureState - The current state of the signature request.
+ * @property {string[]} signatureState.emails - Array of email addresses for the signature request.
+ * @property {number} signatureState.progress - Progress of the signature request simulation.
+ * @property {boolean} signatureState.isRunning - Indicates if the signature request simulation is running.
+ *
+ * @property {Object} handlers - Handlers for managing signature request actions.
+ * @property {Function} handlers.handleEmailChange - Handler for changing an email address.
+ * @property {Function} handlers.handleEmailError - Handler for setting an error state for an email address.
+ * @property {Function} handlers.addEmailInput - Handler for adding a new email input field.
+ * @property {Function} handlers.removeEmailInput - Handler for removing an email input field.
+ * @property {Function} handlers.handleRequestSignature - Handler for initiating a signature request.
  */
 export const useSignatureRequestActions = (
   onRequestSignature: (modalId: ModalIdEnum, documentId: string) => void
@@ -84,14 +86,13 @@ export const useSignatureRequestActions = (
   };
 
   return {
-    emails,
-    errors,
-    progress,
-    isRunning,
-    handleEmailChange,
-    handleEmailError,
-    addEmailInput,
-    removeEmailInput,
-    handleRequestSignature,
+    signatureState: { emails, progress, isRunning },
+    handlers: {
+      handleEmailChange,
+      handleEmailError,
+      addEmailInput,
+      removeEmailInput,
+      handleRequestSignature,
+    },
   };
 };

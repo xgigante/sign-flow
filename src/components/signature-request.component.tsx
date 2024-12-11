@@ -1,16 +1,17 @@
 import React from "react";
 
 import { TEXT } from "../constants/constants";
-import { useSignatureRequestActions } from "../hooks/use-signature-request-actions.hook";
 import { SignatureRequestProps } from "../interfaces/signature-request.interface";
 import EmailInput from "../share/components/email-input.component";
 import ProgressBar from "../share/components/progress-bar.component";
+import { useSignatureRequestActions } from "../hooks/use-signature-request-actions.hook";
 
 /**
- * Component for handling signature requests.
+ * Component for handling the signature request process.
  *
- * @param {Object} props - The component props.
- * @param {function} props.onRequestSignature - Callback function to handle signature request.
+ * @component
+ * @param {Object} props - The properties object.
+ * @param {function} props.onRequestSignature - Callback function to handle the signature request.
  * @param {string} props.documentId - The ID of the document to be signed.
  *
  * @returns {JSX.Element} The rendered component.
@@ -19,16 +20,16 @@ const SignatureRequest: React.FC<SignatureRequestProps> = ({
   onRequestSignature,
   documentId,
 }) => {
+  const { signatureState, handlers } =
+    useSignatureRequestActions(onRequestSignature);
+  const { emails, progress, isRunning } = signatureState;
   const {
-    emails,
-    progress,
-    isRunning,
     handleEmailChange,
     handleEmailError,
     addEmailInput,
     removeEmailInput,
     handleRequestSignature,
-  } = useSignatureRequestActions(onRequestSignature);
+  } = handlers;
 
   return (
     <div>
